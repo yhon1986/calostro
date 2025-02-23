@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suplemento Salud Total 💪</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>¡Tu Salud al Máximo con Este Suplemento! 🌟</h1>
+        <p>Aprobado por Invima (NSA-0013611-2022) ✅</p>
+    </header>
+
+    <section class="hero">
+        <img src="https://via.placeholder.com/600x400?text=Suplemento+Salud+Total" alt="Suplemento Salud Total" class="hero-image">
+    </section>
+
+    <section class="benefits">
+        <h2>Beneficios Increíbles 🚀</h2>
+        <ul>
+            <li>💪 Fortalece el sistema inmunológico y promueve una respuesta saludable</li>
+            <li>🛡️ Antioxidantes que protegen tus células del daño y envejecimiento</li>
+            <li>❤️ Apoya la salud cardiovascular y la circulación</li>
+            <li>⚖️ Equilibra tu inmunidad para que funcione al 100%</li>
+            <li>🍏 Mejora la absorción de nutrientes para más beneficios</li>
+        </ul>
+    </section>
+
+    <section class="pricing">
+        <h2>Ofertas Exclusivas 💰</h2>
+        <div class="price-box">
+            <p>1 Tarro: <strong>$79,900</strong></p>
+            <p>2 Tarros: <strong>$150,000</strong> (Ahorras $9,800) 💸</p>
+            <p>3 Tarros: <strong>$205,000</strong> (Solo $68,333 c/u, ahorras $34,700) 🎉</p>
+            <p>🚚 <strong>Envío GRATIS</strong> + 💵 <strong>Paga al recibir</strong></p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <h2>¡Pide el Tuyo Ahora! 📦</h2>
+        <form id="order-form" onsubmit="submitOrder(event)">
+            <label for="name">Nombre completo:</label>
+            <input type="text" id="name" name="name" required placeholder="Escribe tu nombre">
+
+            <label for="phone">Teléfono:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="Ej: 3001234567">
+
+            <label for="address">Dirección de envío:</label>
+            <input type="text" id="address" name="address" required placeholder="Calle, ciudad, etc.">
+
+            <label for="quantity">Cantidad:</label>
+            <select id="quantity" name="quantity" required>
+                <option value="1">1 Tarro - $79,900</option>
+                <option value="2">2 Tarros - $150,000</option>
+                <option value="3">3 Tarros - $205,000</option>
+            </select>
+
+            <button type="submit" class="submit-btn">Enviar Pedido 📲</button>
+        </form>
+        <p>O contáctame directo: <a href="https://wa.me/573001234567?text=¡Hola!%20Quiero%20saber%20más%20sobre%20el%20suplemento%20💪" 
+           target="_blank" class="whatsapp-btn">WhatsApp 📲</a></p>
+    </section>
+
+    <footer>
+        <p>© 2025 Salud Total - Producto Seguro y Efectivo 🌿</p>
+    </footer>
+
+    <script>
+        function submitOrder(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+            const quantity = document.getElementById('quantity').value;
+            const message = `Hola! Quiero pedir: ${quantity} tarro(s). Nombre: ${name}, Teléfono: ${phone}, Dirección: ${address}`;
+            const whatsappUrl = `https://wa.me/573001234567?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
